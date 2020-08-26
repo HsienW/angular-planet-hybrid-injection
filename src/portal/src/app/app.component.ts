@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
         switchMode: settings.app1.switchMode,
         loadSerial: true,
         scripts: [
-          'main.js'
+          // 'main.js'
         ],
         styles: [
         ],
