@@ -11,6 +11,6 @@ export class HomeService extends AppBaseService {
 
   GetLogAngular1String() {
     console.log('portal home get service is work!');
-    return this.testGetAngular1String();
+    console.log(this.testGetAngular1String());
   }
 }

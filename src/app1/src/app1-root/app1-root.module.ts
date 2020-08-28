@@ -8,8 +8,6 @@ import {routers} from './app1-root.routing';
 import {App1RouterOutletComponent} from './app1-router-outlet.component';
 import {App1RootComponent} from './app1-root.component';
 import {App1RootService} from './app1-root.service';
-import {Angular1InjectorService} from '../../../portal/src/app/angular1-injector.service';
-
 
 @NgModule({
   declarations: [
@@ -22,7 +20,6 @@ import {Angular1InjectorService} from '../../../portal/src/app/angular1-injector
     NgxPlanetModule
   ],
   providers: [
-    Angular1InjectorService,
     App1RootService
   ],
   entryComponents: [],

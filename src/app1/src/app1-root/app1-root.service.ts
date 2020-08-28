@@ -10,6 +10,6 @@ export class App1RootService extends AppBaseService {
 
   GetLogAngular1String() {
     console.log('app1 root service is work!');
-    return this.testGetAngular1String();
+    console.log(this.testGetAngular1String());
   }
 }

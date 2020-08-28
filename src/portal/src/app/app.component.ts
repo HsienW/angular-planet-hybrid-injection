@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Planet, SwitchModes} from '@worktile/planet';
 import {AppRootContext} from '../../../planet-controllers';
 import {CustomSettingsService} from './custom-settings.service';
+import {Angular1InjectorService} from './angular1-injector.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     public appRootContext: AppRootContext,
+    public angular1InjectorService: Angular1InjectorService,
     private customSettingsService: CustomSettingsService,
     private planet: Planet
   ) {
@@ -28,7 +30,8 @@ export class AppComponent implements OnInit {
     this.appRootContext.setName('set root context');
 
     this.planet.setPortalAppData({
-      appRootContext: this.appRootContext
+      appRootContext: this.appRootContext,
+      angular1InjectorService: this.angular1InjectorService
     });
 
     const settings = this.customSettingsService.get();
@@ -39,7 +42,7 @@ export class AppComponent implements OnInit {
         hostParent: '#app-host-container',
         routerPathPrefix: '/app1',
         selector: 'app1-root-container',
-        resourcePathPrefix: '/static/app1',
+        resourcePathPrefix: '/static/app1/',
         preload: settings.app1.preload,
         switchMode: settings.app1.switchMode,
         loadSerial: true,
