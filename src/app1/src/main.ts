@@ -5,6 +5,7 @@ import {App1RootModule} from './app1-root/app1-root.module';
 import {environment} from './environments/environment';
 import {PlanetPortalApplication, defineApplication} from '@worktile/planet';
 import {AppRootContext} from '../../planet-controllers';
+import {Angular1InjectorService} from '../../portal/src/app/angular1-injector.service';
 
 if (environment.production) {
   enableProdMode();
@@ -19,6 +20,10 @@ defineApplication('app1', (portalApp: PlanetPortalApplication) => {
     {
       provide: AppRootContext,
       useValue: portalApp.data.appRootContext
+    },
+    {
+      provide: Angular1InjectorService,
+      useValue: portalApp.data.angular1InjectorService
     }
   ])
     .bootstrapModule(App1RootModule)
