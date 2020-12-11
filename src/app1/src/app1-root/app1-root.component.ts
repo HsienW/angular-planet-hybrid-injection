@@ -3,8 +3,7 @@ import {App1RootService} from './app1-root.service';
 
 @Component({
     selector: 'app1-root',
-    templateUrl: './app1-root.component.html',
-    styleUrls: ['./app1-root.component.css']
+    template: '<router-outlet></router-outlet>'
 })
 export class App1RootComponent implements OnInit  {
 

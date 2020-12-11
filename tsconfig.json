@@ -10,6 +10,8 @@
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "target": "es2015",
+    "module": "esnext",
+    "importHelpers": true,
     "typeRoots": [
       "node_modules/@types"
     ],

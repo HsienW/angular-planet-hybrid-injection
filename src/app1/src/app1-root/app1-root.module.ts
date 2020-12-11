@@ -24,7 +24,7 @@ import {App1RootService} from './app1-root.service';
   ],
   entryComponents: [],
   bootstrap: [
-    App1RouterOutletComponent
+    App1RootComponent
   ]
 })
 export class App1RootModule {}
